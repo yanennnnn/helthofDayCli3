@@ -1,0 +1,146 @@
+.indexTop,.otherTop{
+    margin:0;
+    position: relative;
+    padding: 0 18px;
+    &:after{
+        content:'';
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        bottom: 0;
+        height: 0;
+        border-bottom: 3px solid;
+        transition: .3s;
+    }
+    &:hover{
+        &:after{
+            left:1em;
+            right: 1em;
+        }
+    }
+    @include media-breakpoint-down(sm){
+        padding: 0;
+        &:after{
+            border-bottom:none;
+        }
+    }
+    .nav-link,.cart-list-icon{
+        font-size: $font-secTitle-sm;
+        color:$primary;
+        @include media-breakpoint-down(sm){
+            font-size: $font-text;
+            color:$primary;
+            &:hover,&.active{
+                color:$primary;
+            } 
+            &.active{
+                border-bottom:none;
+            }
+        }
+    }
+}
+// .nav-Cart-text{
+//     font-size: 21px;
+//         @include media-breakpoint-down(sm){
+//             font-size: 1rem;
+//             color:$primary;
+//             &:hover,&.active{
+//                 color:$primary;
+//             } 
+//             &.active{
+//                 border-bottom:none;
+//             }
+//         }
+// }
+.indexTop{
+    &:after{
+        border-color:$beige;
+    }
+    .nav-link,.cart-list-icon{
+        color:#fff;
+        &:hover,&.active{
+            color:#fff;
+        }
+        @include media-breakpoint-down(sm) {
+            
+            color:$primary;
+            &:hover,&.active{
+                color:$primary;
+            }
+        }
+    }
+}
+.otherTop{
+    
+    &:after{
+        border-color:$primary;
+    }
+    .nav-link,.cart-list-icon{
+        &:hover,&.active{
+            color:$primary;
+        }
+        
+    }
+    
+}
+.nav{
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    transition: .5s ease;
+    z-index: 9998;
+    @include media-breakpoint-down(sm) {
+        background-color:$light;
+        box-shadow: 0 2px 3px $gray-600;
+    }
+}
+.nav-light{
+    background-color: $light;
+    box-shadow: 0 2px 3px $gray-600;
+    
+}
+.navbar-toggler{
+    border:1px solid $primary;
+
+}
+ .navbar-brand{
+    background-image: url('./assets/images/juice-icon.png');
+    background-size: cover;
+    width: 35px;
+    height: 55px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    margin-left:50px;
+    &.nav-logo{
+        @include media-breakpoint-down(sm) {
+            // margin:0 auto;
+        }
+    }
+ }
+
+.dropdown-menu{
+   max-width: 400px;
+   @include media-breakpoint-down(sm) {
+    max-width: 280px;
+  }
+}
+
+ .dropdown-toggle{
+    &:after{
+      border:0;
+    }
+}
+ .text-nowrap{
+    white-space: nowrap;
+ }
+
+ .cart-list-icon{
+    padding: 0.5rem 1rem;
+    @include media-breakpoint-down(sm) {
+      margin-top:5px;
+   }
+   
+}

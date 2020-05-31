@@ -1,0 +1,58 @@
+.cart{
+    margin-top: 71px;
+    &-img{
+        background-size: cover;
+        height: 30px;
+    }
+    .couponCode{
+        width: 40%;
+        @include media-breakpoint-down(md){
+            width: 60%;
+          }
+        @include media-breakpoint-down(sm){
+           width: 95%;
+           margin-right: 10px;
+         }
+    }
+    &-bg{
+        img{
+            width: 55px;
+            height: 65px;
+        }
+    }
+
+}
+
+.table thead th{
+    border-bottom:0;
+}
+
+.cart-list{
+    position: relative;
+    .badge{
+        position: absolute;
+        top:7%;
+        right:35%;
+        @include media-breakpoint-down(sm) {
+            top:15%;
+            right:25% ;
+         }
+      }
+}
+
+.cart-list-product{
+    //  width: 100%;
+  white-space: nowrap; 
+  max-width: 120px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  @include media-breakpoint-down(sm) {
+    max-width: 70px;
+  }
+ }
+
+ #qtySelect{
+    width:70px;
+    border-radius: .2rem;
+    padding: 2px 0 6px 14px;
+ }
