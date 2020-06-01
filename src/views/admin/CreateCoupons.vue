@@ -186,11 +186,11 @@ export default {
         if (response.data.success) {
           $('#CouponcodeModal').modal('hide');
           vm.getCoupons();
-          vm.$bus.$emit('message:push', messageSuccess, 'success');
+          vm.$store.dispatch('updateMessage', { message: messageSuccess, status: 'success' });
         } else {
           $('#CouponcodeModal').modal('hide');
           vm.getCoupons();
-          vm.$bus.$emit('message:push', messageDanger, 'danger');
+          vm.$store.dispatch('updateMessage', { message: messageDanger, status: 'danger' });
         }
       });
     },
@@ -205,11 +205,11 @@ export default {
         if (response.data.success) {
           $('#delCouponcodeModal').modal('hide');
           vm.getCoupons();
-          vm.$bus.$emit('message:push', '刪除成功', 'success');
+          vm.$store.dispatch('updateMessage', { message: '刪除成功', status: 'success' });
         } else {
           $('#delCouponcodeModal').modal('hide');
           vm.getCoupons();
-          vm.$bus.$emit('message:push', '出現錯誤!', 'danger');
+          vm.$store.dispatch('updateMessage', { message: '出現錯誤，請重新再試', status: 'danger' });
         }
       });
     },

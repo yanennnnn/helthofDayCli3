@@ -207,7 +207,10 @@ export default {
       vm.$http.put(url, { data: vm.tempOrder }).then((response) => {
         if (response.data.success) {
           $('#updateModal').modal('hide');
+          vm.$store.dispatch('updateMessage', { message: '更新成功', status: 'success' });
           vm.getOrders();
+        } else {
+          vm.$store.dispatch('updateMessage', { message: '更新失敗，請重新再試', status: 'danger' });
         }
       });
     },

@@ -202,6 +202,12 @@ export default {
     ...mapGetters('cartsModules', ['cart']),
     ...mapGetters('productsModules', ['getCurrentProduct']),
   },
+  watch: {
+    $route() {
+      this.getPrdouct();
+      $('html,body').scrollTop(0);
+    },
+  },
   created() {
     this.getCart();
     this.getPrdouct();
