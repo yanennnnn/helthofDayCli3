@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <Nav />
-        <AlertMessage />
-        <router-view></router-view>
-   </div>
+  <div>
+    <Nav />
+    <AlertMessage />
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>

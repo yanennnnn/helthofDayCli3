@@ -90,5 +90,4 @@ export default {
     getCurrentProduct: (state) => state.getCurrentProduct,
     slideproducts: (state) => state.slideproducts,
   },
-
 };

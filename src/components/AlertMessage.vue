@@ -26,17 +26,15 @@ export default {
   computed: {
     ...mapGetters(['messages']),
   },
-
 };
 </script>
-
-<style scope>
-.message-alert {
-  position: fixed;
-  width: 250px;
-  top: 71px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1100;
-}
+<style scope lang="scss">
+  .message-alert {
+    position: fixed;
+    width: 250px;
+    top: 71px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1100;
+  }
 </style>

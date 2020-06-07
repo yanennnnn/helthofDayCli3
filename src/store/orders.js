@@ -14,7 +14,6 @@ export default {
       context.commit('LOADING', true, { root: true });
       axios.post(url, { data: order }).then((response) => {
         if (response.data.success) {
-          // context.dispatch('getCart');
           router.push(`/customerCheckout/${response.data.orderId}`);
           context.commit('LOADING', false, { root: true });
         } else {
@@ -28,7 +27,6 @@ export default {
       axios.get(url).then((response) => {
         if (response.data.success) {
           context.commit('GETORDER', response.data.order);
-          // vm.order = response.data.order;
         }
       });
     },
@@ -51,5 +49,4 @@ export default {
   getters: {
     order: (state) => state.order,
   },
-
 };

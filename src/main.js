@@ -40,12 +40,13 @@ const i18n = new VueI18n({
   locale: 'zhTW',
 });
 Vue.use(VeeValidate, {
-  events: 'input|blur', // 這是為了讓使用者離開該欄位時觸發驗證
+  events: 'input|blur',
   i18n,
   dictionary: {
     zhTW,
   },
 });
+
 Vue.use(VueAwesomeSwiper);
 
 new Vue({

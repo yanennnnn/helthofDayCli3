@@ -6,7 +6,7 @@
               <img src="../../assets/images/juice-dribbble.gif" width="100px">
           </template>
       </loading>
-      <nav class="navbar navbar-expand-md  nav ">
+      <nav class="navbar navbar-expand-md nav">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button"
             data-toggle="collapse"
@@ -45,7 +45,7 @@
           <div class="dropdown cart-list order-1 order-md-2">
             <a class="cart-list-icon dropdown-toggle" type="button" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <font-awesome-icon class="mr-1" :icon="[ 'fas', 'shopping-cart' ]" />
+                <font-awesome-icon :icon="[ 'fas', 'shopping-cart' ]" />
             </a>
             <span class="badge  badge-danger rounded-circle"
                 v-if="cartlength">{{cartlength}}
@@ -58,15 +58,17 @@
                 <table class="table">
                   <tbody>
                     <tr v-for="item in cart.carts" :key="item.id">
-                      <td scope="row" >
+                      <td scope="row" width="5">
                         <button class="btn btn-sm btn-outline-danger align-middle"
                           @click.prevent="removeCartItem(item.id)">
                           <font-awesome-icon  :icon="[ 'far', 'trash-alt' ]" />
                         </button>
                       </td>
                       <td class="align-middle cart-list-product">{{item.product.title}}</td>
-                      <td class="align-middle text-nowrap">{{item.qty}} {{item.product.unit}}</td>
-                      <td class="align-middle">{{item.final_total | currency}}</td>
+                      <td class="align-middle text-nowrap" width="5">
+                        {{item.qty}} {{item.product.unit}}
+                      </td>
+                      <td class="align-middle" width="5">{{item.final_total | currency}}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -129,6 +131,9 @@ export default {
   mounted() {
     const vm = this;
     vm.getrouter();
+    $('.nav-item').on('click', () => {
+      $('#fontNavbar').removeClass('show');
+    });
     $(window).scroll(() => {
       const { path } = vm.$route;
       const search = 'index';
@@ -173,9 +178,6 @@ export default {
   created() {
     const vm = this;
     vm.getCart();
-    // vm.$bus.$on('cartCreate:push', () => {
-    //   vm.getCart();
-    // });
   },
 };
 </script>

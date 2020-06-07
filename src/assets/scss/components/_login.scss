@@ -1,87 +1,80 @@
 
-    .sign{
-        overflow: hidden;
-        position: relative;
-        height: 100vh;
-    }
-    .sign-bg{
-        background-image: url("./assets/images/banner-1.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-    .bg-filter{
-        filter: blur(5px);
-        position: absolute;
-        top:-10px;
-        right: -10px;
-        left: -10px;
-        bottom: -10px;
-        z-index: -2;
-    }
-    .sign-form{
-        background-color: rgba($color: #ffffff, $alpha: .5);
-        max-width: 530px;
-        padding:70px 0px;
-        margin-top: 120px;
-        box-shadow: 0 0 1em 3px rgba(0, 0, 0, 0.2);
-        @include media-breakpoint-down(xs){
-            background-color: rgba($color: #ffffff, $alpha: 0);
-            box-shadow: none;
-            margin-top: 80px;
-        }
-    }
-    .form-signin {
-        background-color: $beige;
-        width: 100%;
-        max-width: 330px;
-        padding: 20px 45px;
-        margin: auto;
-        box-shadow: 0 0 1em 3px rgba(0, 0, 0, 0.2);
-        @include media-breakpoint-down(sm){
-            max-width: 300px;
-            padding: 20px 20px;
-        }
-        h2{
-            position: relative;
+.sign{
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+.sign-bg{
+  background-image: url("./assets/images/banner-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.bg-filter{
+  filter: blur(5px);
+  position: absolute;
+  top:-10px;
+  right: -10px;
+  left: -10px;
+  bottom: -10px;
+  z-index: -2;
+}
+.sign-form{
+  background-color: rgba($color: #ffffff, $alpha: .5);
+  max-width: 530px;
+  padding:70px 0px;
+  margin-top: 120px;
+  box-shadow: 0 0 1em 3px rgba(0, 0, 0, 0.2);
+  @include media-breakpoint-down(xs){
+    background-color: rgba($color: #ffffff, $alpha: 0);
+    box-shadow: none;
+    margin-top: 80px;
+  }
+}
+.form-signin {
+  background-color: $beige;
+  width: 100%;
+  max-width: 330px;
+  padding: 20px 45px;
+  margin: auto;
+  box-shadow: 0 0 1em 3px rgba(0, 0, 0, 0.2);
+  @include media-breakpoint-down(sm){
+    max-width: 300px;
+    padding: 20px 20px;
+  }
+  h2{
+    position: relative;
+  }
+}
+.form-signin .checkbox {
+  margin-left: 5px;
+}
+.form-signin input[type="email"],.form-signin input[type="password"] {
+  position: relative;
+  margin-bottom: 25px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border:0;
+  border-bottom: 2px solid rgba($color:$primary, $alpha: .5);
+  background-color: transparent;
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+    border-bottom: 2px solid rgba($color:$primary, $alpha: 1);
+  }
+}
 
-        }
+.other-signin{
+  a{
+    width: 45px;
+    height: 45px;
+    font-size: $font-secTitle-sm;
+    line-height: 45px;
+    &:first-child{
+      background-color:#4267b2 ;
     }
-    .form-signin .checkbox {
-        margin-left: 5px;
+    &:last-child{
+      background-color: #DB4437;
     }
-
-    .form-signin input[type="email"],.form-signin input[type="password"] {
-        position: relative;
-        margin-bottom: 25px;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-        border:0;
-        border-bottom: 2px solid rgba($color:$primary, $alpha: .5);
-        background-color: transparent;
-        &:focus{
-            outline: 0;
-            box-shadow: none;
-            border-bottom: 2px solid rgba($color:$primary, $alpha: 1);
-
-        }
-
-    }
-
-    .other-signin{
-        a{
-            width: 45px;
-            height: 45px;
-            font-size: $font-secTitle-sm;
-            line-height: 45px;
-            // padding:7px 15px 0 ;
-            &:first-child{
-                background-color:#4267b2 ;
-            
-            }
-            &:last-child{
-                background-color: #DB4437;
-            }
-        }
-        
-    }
+  }
+}

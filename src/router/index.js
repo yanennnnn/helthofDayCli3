@@ -1,10 +1,7 @@
-// 官方元件
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-
-Vue.use(VueRouter);// 啟用放入的vue元件
-
+Vue.use(VueRouter);
 
 export default new VueRouter({
   routes: [
@@ -86,6 +83,5 @@ export default new VueRouter({
         },
       ],
     },
-
   ],
 });

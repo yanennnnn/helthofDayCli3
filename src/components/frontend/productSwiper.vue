@@ -3,26 +3,25 @@
   <swiper class="swiper" :options="swiperOption">
     <swiper-slide v-for='item in recommendproduct' :key="item.id ">
       <div class="row justify-content-center">
-          <div class=" mb-4 mx-2"  >
-            <div class="card border-0 products-card">
-              <a :href="`#/detail/${item.id}`"
-                @click.prevent="ToTargetDetail(item.id)" class="text-decoration-none"
-                >
-                <div class="products-info-img text-center rounded"
-                  :style="{backgroundImage: `url(${item.imageUrl})`}">
-                  <div><p>了解更多...</p></div>
-                </div>
-                <div class="card-body ">
-                  <h5
-                    class="card-title text-center d-block text-decoration-none ">
-                      {{item.title}}
-                  </h5>
-                  <p class="card-text products-info-content text-muted">{{item.content}}</p>
-                </div>
-              </a>
-            </div>
-            <hr>
+        <div class="mb-4 mx-2">
+          <div class="card border-0 products-card">
+            <a :href="`#/detail/${ item.id }`"
+              @click.prevent="ToTargetDetail(item.id)" class="text-decoration-none">
+              <div class="products-info-img text-center rounded"
+                :style="{backgroundImage: `url(${ item.imageUrl })`}">
+                <div><p>了解更多...</p></div>
+              </div>
+              <div class="card-body">
+                <h5
+                  class="card-title text-center d-block text-decoration-none ">
+                    {{ item.title }}
+                </h5>
+                <p class="card-text products-info-content text-muted">{{ item.content }}</p>
+              </div>
+            </a>
           </div>
+          <hr>
+        </div>
       </div>
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
@@ -48,7 +47,6 @@ export default {
         speed: 300,
         autoplay: true,
         loop: true, // 開啟迴圈模式,
-        // slidesPerView: 1,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -70,7 +68,6 @@ export default {
           },
         },
       },
-      // products: [],
       recommendproduct: [],
     };
   },
@@ -80,9 +77,7 @@ export default {
     },
   },
   computed: {
-
     ...mapGetters('productsModules', ['slideproducts']),
-
   },
   created() {
     this.$store.dispatch('productsModules/getSlideProducts').then(() => {
@@ -98,9 +93,8 @@ export default {
   },
 };
 </script>
-
 <style scoped lang="scss">
-    .swiper-container{
-        height: 450px;
-    }
+  .swiper-container{
+    height: 450px;
+  }
 </style>

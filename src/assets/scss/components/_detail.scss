@@ -1,50 +1,48 @@
 .item-img{
-    background-size: cover; 
-    background-position: center;
-    height: 100%;
+  background-size: cover; 
+  background-position: center;
+  height: 100%;
 }
 .detail{
-    margin-top: 71px;
-    &-notice{
-        >p{
-            color:$atomic-tangerine;
-            font-weight: bold;
-            margin-bottom: 0;
-        }
-        >ul{
-            list-style-type:square;
-        }
+  margin-top: 71px;
+  &-notice{
+    >p{
+      color:$atomic-tangerine;
+      font-weight: bold;
+      margin-bottom: 0;
     }
-    .item-img{
-        @include media-breakpoint-down(lg){
-            height: 550px;
-            // vertical-align: middle;
-        }
-        @include media-breakpoint-down(md){
-           height: 500px;
-           
-       }
-       @include media-breakpoint-down(sm){
-           margin-bottom: 20px;
-       }
-   }
-   &-info{
-       &-title{
-           font-size:$font-title;
-           @include media-breakpoint-down(md){
-            font-size:$font-title-md;
-           }
-       }
-       &-price{
-           font-size:$font-secTitle;
-           @include media-breakpoint-down(md){
-            font-size:$font-secTitle-md;
-           }
-       }
-       hr{
-        @include media-breakpoint-down(md){
-            margin:8px 0
-           }
-       }
+    >ul{
+      list-style-type:square;
+    }
+  }
+  .item-img{
+    @include media-breakpoint-down(lg){
+      height: 550px;
+    }
+    @include media-breakpoint-down(md){
+      height: 500px;  
+    }
+    @include media-breakpoint-down(sm){
+      margin-bottom: 20px;
+    }
+  }
+  &-info{
+    &-title{
+      font-size:$font-title;
+      @include media-breakpoint-down(md){
+        font-size:$font-title-md;
+      }
+    }
+    &-price{
+      font-size:$font-secTitle;
+      @include media-breakpoint-down(md){
+        font-size:$font-secTitle-md;
+      }
+    }
+    hr{
+      @include media-breakpoint-down(md){
+        margin:8px 0
+      }
+    }
    }
 }
