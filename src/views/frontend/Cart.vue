@@ -38,8 +38,8 @@
                   @click="changeQty(item.id, item.product.id, item.qty,false)">
                     <font-awesome-icon :icon="[ 'fas', 'minus' ]" />
                   </button>
-                  <input type="text" class="form-control border-primary d-inline-block"
-                    id="qtySelect" v-model="item.qty" disabled>
+                  <input type="text" v-model="item.qty" disabled
+                    class="form-control border-primary d-inline-block qtySelect">
                   <button class="btn btn-outline-primary btn-sm ml-2"
                   @click="changeQty(item.id, item.product.id, item.qty,true)">
                     <font-awesome-icon :icon="[ 'fas', 'plus' ]" />
@@ -52,7 +52,7 @@
                   @click="changeQty(item.id,item.product.id,item.qty,false)">
                     <font-awesome-icon :icon="[ 'fas', 'minus' ]" />
                   </button>
-                  <input type="text" class="form-control border-primary" id="qtySelect"
+                  <input type="text" class="form-control border-primary qtySelect"
                     v-model="item.qty" disabled>
                   <button class="btn btn-outline-primary btn-sm ml-2"
                   @click="changeQty(item.id,item.product.id,item.qty,true)">

@@ -38,7 +38,6 @@ export default {
     },
     getSlideProducts(context) {
       const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/products/all`;
-      context.commit('LOADING', true, { root: true });
       return new Promise((resolve) => {
         axios.get(url).then((response) => {
           if (response.data.success) {
