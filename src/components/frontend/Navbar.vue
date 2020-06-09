@@ -72,13 +72,13 @@
                     </tr>
                   </tbody>
                 </table>
-                <router-link href="#" class="btn btn-primary btn-block text-light" to="/cart">
+                <router-link href="#" class="btn btn-primary btn-block" to="/cart">
                   結帳去
                 </router-link>
               </div>
               <div v-else class="py-2">
                   <p class="text-center font-weight-bold mb-3">購物車尚未有商品</p>
-                  <router-link href="#" class="btn btn-middle-green-yellow btn-block text-dark"
+                  <router-link href="#" class="btn btn-primary btn-block"
                     to="/products">
                     來去逛逛
                 </router-link>
@@ -170,9 +170,9 @@ export default {
     ...mapGetters('cartsModules', ['cart', 'cartlength']),
   },
   watch: {
-    // eslint-disable-next-line object-shorthand
-    '$route'() {
-      this.getrouter();
+    $route() {
+      const vm = this;
+      vm.getrouter();
     },
   },
   created() {

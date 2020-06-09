@@ -1,7 +1,7 @@
 <template>
   <div>
-    <footer class=" mt-5 bg-primary">
-      <div class=" container py-4 text-center text-light">
+    <footer class="mt-5 bg-primary">
+      <div class="container py-4 text-center text-light">
         <img src="../../assets/images/juice-icon.png" width="75px" alt="">
         <div class="d-flex  justify-content-center my-3">
           <a href="#" class="text-light text-decoration-none">facebook</a>

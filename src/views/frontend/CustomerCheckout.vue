@@ -1,17 +1,17 @@
 <template>
- <div>
-   <div class="container customerCheckout">
-     <h2 class="mt-5 text-center">訂單付款</h2>
+ <div class="customerCheckout">
+   <div class="container">
+     <h2 class="text-center">訂單付款</h2>
      <form @submit.prevent="payOrder">
         <div class="row mt-3">
           <div class="col-lg-7 col-md-9 col-12 mx-auto">
             <div class="border border-primary rounded">
-              <h3 class=" bg-primary m-0 px-4  py-2 text-light">訂購資料</h3>
+              <h3 class="bg-primary m-0 px-4  py-2 text-light">訂購資料</h3>
               <table class="table" @submit.prevent="payOrder">
                 <tbody>
                   <tr>
                     <th class="align-middle p-0 pl-2 py-3" width="120">訂單編號:</th>
-                    <td class="align-middle ">{{orderId}}</td>
+                    <td class="align-middle ">{{ orderId }}</td>
                   </tr>
                   <tr>
                     <th class="align-middle p-0 pl-2 py-3" width="120">總金額:</th>
@@ -106,21 +106,17 @@
         </div>
       </form>
     </div>
-    <Footer/>
   </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
-import Footer from '../../components/frontend/Footer.vue';
 
 export default {
   name: 'customerCheckout',
-  components: {
-    Footer,
-  },
   data() {
     return {
       orderId: '',
+      leave: false,
     };
   },
   methods: {
@@ -141,3 +137,9 @@ export default {
   },
 };
 </script>
+<style scoped lang="scss">
+  .customerCheckout{
+    height: 100vh;
+    margin-top: 100px;
+  }
+</style>

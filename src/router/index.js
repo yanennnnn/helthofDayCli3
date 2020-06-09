@@ -39,23 +39,22 @@ export default new VueRouter({
           name: 'customerOrder',
           component: () => import('@/views/frontend/CustomerOrder.vue'),
         },
-
+        {
+          name: 'customerCheckout',
+          path: '/customerCheckout/:orderId',
+          component: () => import('@/views/frontend/CustomerCheckout.vue'),
+        },
+        {
+          name: 'customerComplete',
+          path: '/customerComplete/:orderId',
+          component: () => import('@/views/frontend/CustomerComplete.vue'),
+        },
       ],
     },
     {
       name: 'login',
       path: '/login',
       component: () => import('@/views/frontend/Login.vue'),
-    },
-    {
-      name: 'customerCheckout',
-      path: '/customerCheckout/:orderId',
-      component: () => import('@/views/frontend/CustomerCheckout.vue'),
-    },
-    {
-      name: 'customerComplete',
-      path: '/customerComplete/:orderId',
-      component: () => import('@/views/frontend/CustomerComplete.vue'),
     },
     {
       name: 'dashboard',

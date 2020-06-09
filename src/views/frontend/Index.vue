@@ -6,7 +6,7 @@
         <img src="../../assets/images/juice-dribbble.gif" width="100px">
       </template>
     </loading>
-    <div class=" banner jumbotron jumbotron-fluid d-flex align-items-center">
+    <div class="banner jumbotron jumbotron-fluid d-flex align-items-center">
       <div class="container jumbotron-bg d-flex align-items-center">
         <div class="text-center mx-auto">
           <h2 class="text-light font-weight-bolder">果汁。沙拉。優格</h2>

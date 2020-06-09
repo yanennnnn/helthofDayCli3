@@ -10,7 +10,7 @@
       <div class="text-right">
         <button class="btn mt-4 btn-primary" @click="openModal(true)">新增產品</button>
       </div>
-      <div class=" mt-4 table-responsive-md">
+      <div class="mt-4 table-responsive-md">
         <table class="table">
           <thead>
             <tr>
@@ -200,7 +200,7 @@ export default {
       const vm = this;
       const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/products?page=${page}`;
       vm.isLoading = true;
-      this.$http.get(url).then((response) => {
+      vm.$http.get(url).then((response) => {
         vm.products = response.data.products;
         vm.pagination = response.data.pagination;
         vm.isLoading = false;
@@ -239,7 +239,7 @@ export default {
         messageSuccess = '編輯成功!';
         messageDanger = '編輯失敗!';
       }
-      this.axios[httpMethod](api, { data: vm.tempProduct }).then((response) => {
+      vm.axios[httpMethod](api, { data: vm.tempProduct }).then((response) => {
         if (response.data.success) {
           $('#updateModal').modal('hide');
           vm.getProducts();
@@ -258,7 +258,7 @@ export default {
       formData.append('file-to-upload', uploadFile);
       const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/upload`;
       vm.status.fileUploading = true;
-      this.$http.post(url, formData, {
+      vm.$http.post(url, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
 
       }).then((response) => {
@@ -290,7 +290,7 @@ export default {
       const vm = this;
       const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
       vm.isLoading = true;
-      this.$http.delete(url).then(((response) => {
+      vm.$http.delete(url).then(((response) => {
         if (response.data.success) {
           vm.$store.dispatch('updateMessage', { message: '刪除成功', status: 'success' });
           vm.getProducts();

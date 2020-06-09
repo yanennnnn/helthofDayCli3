@@ -110,8 +110,8 @@
           <div class="modal-body leave-modal">
             <p>您的訂單資料尚未送出，確定要離開此頁?</p>
             <div class="text-right">
-              <button type="button" class="mr-2 confirm" data-dismiss="modal">確定</button>
-              <button type="button" class="cancel" data-dismiss="modal">取消</button>
+              <button type="button" class="mr-2 cancel" data-dismiss="modal">取消</button>
+              <button type="button" class="confirm" data-dismiss="modal">確定</button>
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default {
       const order = vm.form;
       vm.$validator.validate().then((result) => { // 防止沒有驗證也能送出表單
         if (result) {
-          this.$store.dispatch('ordersModules/createOrder', order).then(() => {
+          vm.$store.dispatch('ordersModules/createOrder', order).then(() => {
             vm.leave = true;
           });
         } else {
@@ -179,7 +179,8 @@ export default {
 </script>
 <style scoped lang="scss">
   .customerOrder{
-    margin-top: 71px;
+    height: 100vh;
+    margin-top:100px;
     &-cart{
       margin-top:20px;
       border-top: thick double;

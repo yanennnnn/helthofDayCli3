@@ -1,7 +1,9 @@
+.carousel{
+  margin-top: 71px;
+}
 .carousel-img-1{
   background-image: url('./assets/images/banner-2.jpg');
   background-position: center top;
-
 } 
 .carousel-img-2{
   background-image: url('./assets/images/banner-3.jpg');
@@ -13,7 +15,10 @@
 }
 .carousel-img-1,.carousel-img-2,.carousel-img-3{
   width:100%; 
-  height:500px;
+  height:450px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   @include media-breakpoint-down(sm) {
     height: 320px;
   }
@@ -22,16 +27,20 @@
   bottom: 28%;
 }
 .carousel-caption-text{
-  padding-top:40px;
   height: 200px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   background:linear-gradient(to left,rgba(255,255,255,0),rgba(133, 133, 133, 0.63),rgba(255,255,255,0));
+  @include media-breakpoint-down(md) {
+    height: 150px;
+  }
   p{
     font-size: $font-secTitle;
     @include media-breakpoint-down(md) {
       font-size:$font-secTitle-md;
     }
     @include media-breakpoint-down(sm) {
-      padding-top:60px;
       font-size:$font-secTitle-sm;
     }
   }

@@ -89,7 +89,7 @@
             </div>
             <div class="mt-1">
               <span>備註 :</span>
-              <span>{{tempOrder.message}}</span>
+              <span>{{ tempOrder.message }}</span>
             </div>
             <div class="mt-3">
               <table class="table">

@@ -1,6 +1,6 @@
 <template>
   <div class="customerComplete">
-    <div class="container" style="margin:100px auto;">
+    <section class="container" style="margin:200px auto 0 auto;">
       <h2 class="text-center mb-4">付款完成</h2>
       <div class="border border-outline-primary rounded">
         <p class="text-center h5 mt-3">感謝訂購</p>
@@ -19,27 +19,23 @@
               <span class="text-atomic-tangerine">{{ order.total | currency }}</span>
           </div>
         </div>
-      <div class="my-3 text-center">
-        <span>付款成功後，我們將會盡快出貨給您</span>
-        <br>
-        <span>如有其它變更需求，請致電客服0800-000-000將有專員為您服務。</span>
+        <div class="my-3 text-center">
+          <span>付款成功後，我們將會盡快出貨給您</span>
+          <br>
+          <span>如有其它變更需求，請致電客服0800-000-000將有專員為您服務。</span>
+        </div>
       </div>
-    </div>
-    <div class="text-center mt-3">
-      <button class="btn btn-primary" @click="getProducts" style="width:220px"> 繼續選購</button>
-    </div>
-    </div>
-    <Footer/>
+      <div class="text-center mt-3">
+        <button class="btn btn-primary" @click="getProducts" style="width:220px"> 繼續選購</button>
+      </div>
+    </section>
   </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
-import Footer from '../../components/frontend/Footer.vue';
 
 export default {
-  components: {
-    Footer,
-  },
+  name: 'customerComplete',
   data() {
     return {
       orderId: '',
@@ -65,3 +61,9 @@ export default {
 
 };
 </script>
+<style scoped lang="scss">
+  .customerComplete{
+    height: 100vh;
+    margin: auto 0;
+  }
+</style>

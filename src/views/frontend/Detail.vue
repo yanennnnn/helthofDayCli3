@@ -16,7 +16,7 @@
             <router-link to="/products" class="text-maple">所有產品</router-link>
           </li>
           <li class="breadcrumb-item active" aria-current="page">
-            <span>{{getCurrentProduct.title}}</span>
+            <span>{{ getCurrentProduct.title }}</span>
           </li>
         </ol>
       </nav>
@@ -29,11 +29,11 @@
           <h2 class="detail-info-title text-primary font-weight-bold ">
               {{ getCurrentProduct.title }}
           </h2>
-          <div class=" border rounded border-middle-green-yellow p-2 mt-3">
-            <p class="text-muted ml-1">產品原料 : {{getCurrentProduct.description}}</p>
+          <div class="border rounded border-middle-green-yellow p-2 mt-3">
+            <p class="text-muted ml-1">產品原料 : {{ getCurrentProduct.description }}</p>
             <div class="detail-info-price ml-1"
               v-if="getCurrentProduct.price===getCurrentProduct.origin_price">
-                <span >{{getCurrentProduct.price | currency}}</span>
+                <span >{{ getCurrentProduct.price | currency }}</span>
             </div>
             <div class="detail-info-price ml-1" v-else>
               <span class="text-danger">{{ getCurrentProduct.price | currency }}</span>
@@ -175,7 +175,7 @@ export default {
     ...mapActions('cartsModules', ['getCart']),
     getPrdouct() {
       const vm = this;
-      const { id } = this.$route.params;
+      const { id } = vm.$route.params;
       vm.counts = 1;
       vm.$store.dispatch('productsModules/getPrdouct', id);
     },

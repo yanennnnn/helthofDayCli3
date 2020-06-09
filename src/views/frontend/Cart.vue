@@ -1,12 +1,12 @@
 <template>
-  <div >
+  <div class="cart">
     <loading :active.sync="isLoading">
       <template slot="default">
           <img src="../../assets/images/juice-icon.png" width="70px">
           <img src="../../assets/images/juice-dribbble.gif" width="100px">
       </template>
     </loading>
-    <div class="container px-md-5 px-0 cart text-center">
+    <div class="container px-md-5 px-0 text-center">
       <h2 class="pt-4">購物車內容</h2>
       <div class="mt-4" v-if="cartlength!==0">
         <table class="table">
@@ -138,7 +138,7 @@ export default {
     },
     addCouponCode() {
       const vm = this;
-      this.$store.dispatch('cartsModules/addCouponCode', vm.coupon_code);
+      vm.$store.dispatch('cartsModules/addCouponCode', vm.coupon_code);
     },
     changeQty(id, productId, qty, calc) {
       let newQty;
@@ -169,3 +169,8 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+  .cart{
+    height: 100vh;
+  }
+</style>
