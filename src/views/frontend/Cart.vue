@@ -105,7 +105,7 @@
           </button>
         </div>
       </div>
-      <div v-else class="mt-4">
+      <div v-else class="mt-4 productSwiper">
         <p style="padding:70px 0 70px 0">尚未有商品，快來去逛逛吧!</p>
         <button class="btn btn-primary py-2" style="width:30%;"
           @click="goProduct">前往商品</button>
@@ -169,8 +169,3 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-  .cart{
-    height: 100vh;
-  }
-</style>

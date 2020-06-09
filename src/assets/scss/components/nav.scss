@@ -109,8 +109,12 @@
 
 .dropdown-menu{
   width: 350px;
+  max-height: 400px;
+  overflow-y: scroll;
 }
-
+.dropdown-menu::-webkit-scrollbar {
+  display: none;
+}
 .dropdown-toggle{
   &:after{
     border:0;
