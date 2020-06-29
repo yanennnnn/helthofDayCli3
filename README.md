@@ -1,6 +1,6 @@
 # health-of-day
 
-![GITHUB]( https://upload.cc/i1/2020/06/14/Ho1kQz.jpg "health-of-day首頁")
+![GITHUB]( https://imgur.com/zPgxNQk "health-of-day首頁")
 
 ## 使用技術
 * Vuex
@@ -39,27 +39,27 @@
 
 ### 網頁畫面
 首頁
-![GITHUB]( https://upload.cc/i1/2020/06/14/Ho1kQz.jpg "health-of-day首頁")
+![GITHUB]( https://imgur.com/zPgxNQk "health-of-day首頁")
 
 產品頁
-![GITHUB]( https://upload.cc/i1/2020/06/14/aPh7Gl.jpg "所有產品")
+![GITHUB]( https://imgur.com/DvxMSA2 "所有產品")
 
 單一產品
-![GITHUB]( https://upload.cc/i1/2020/06/14/D0BOoa.jpg "單一產品")
+![GITHUB]( https://imgur.com/iiYA3xh "單一產品")
 
 購物車
-![GITHUB]( https://upload.cc/i1/2020/06/14/QCSHMK.jpg "購物車")
+![GITHUB]( https://imgur.com/UkJqsHl "購物車")
 
 下單/結帳
-![GITHUB]( https://upload.cc/i1/2020/06/14/3wFQuJ.jpg "訂購資料")
-![GITHUB]( https://upload.cc/i1/2020/06/14/d0lfHp.jpg "訂單付款")
-![GITHUB]( https://upload.cc/i1/2020/06/14/3R4qh7.jpg "單一產品")
+![GITHUB]( https://imgur.com/hE4ltZS "訂購資料")
+![GITHUB]( https://imgur.com/yfcLbID "訂單付款")
+![GITHUB]( https://imgur.com/mCPYqYh "付款完成")
 
 登入頁
-![GITHUB]( https://upload.cc/i1/2020/06/14/Zdu6DF.jpg "登入頁")
+![GITHUB]( https://imgur.com/sJ8yvdM "登入頁")
 
 後台產品列表
-![GITHUB]( https://upload.cc/i1/2020/06/14/AWTr4C.jpg "後台產品列表")
+![GITHUB]( https://imgur.com/91hhk6A "後台產品列表")
 
 其餘更多細節部分，歡迎至 Demo 網站觀看：https://yanennnnn.github.io/helthofDayCli3/#/index
 
