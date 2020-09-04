@@ -6,10 +6,6 @@ Vue.use(VueRouter);
 export default new VueRouter({
   routes: [
     {
-      path: '*',
-      redirect: '/index',
-    },
-    {
       path: '/',
       redirect: '/index',
       component: () => import('../views/frontend/Layout.vue'),
@@ -81,6 +77,10 @@ export default new VueRouter({
           meta: { requiresAuth: true },
         },
       ],
+    },
+    {
+      path: '*',
+      redirect: '/index',
     },
   ],
 });
